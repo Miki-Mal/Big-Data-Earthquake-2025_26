@@ -1,0 +1,17 @@
+region_id,region,sub_region,lat_min,lat_max,lon_min,lon_max
+1,"East Pacific","Alaska & Western Canada",50.0,90.0,-180.0,-30.0
+2,"East Pacific","USA & Mexico (San Andreas)",15.0,50.0,-180.0,-30.0
+3,"East Pacific","South America (Andes)",-55.0,15.0,-180.0,-30.0
+4,"East Pacific","Southern Ocean (Pacific Sector)",-90.0,-55.0,-180.0,-30.0
+5,"West Pacific","Kamchatka, Kuril & Japan",30.0,90.0,120.0,180.0
+6,"West Pacific","Philippines & Mariana Trench",0.0,30.0,120.0,180.0
+7,"West Pacific","Indonesia, Papua & Australia",-45.0,0.0,120.0,180.0
+8,"West Pacific","New Zealand & Kermadec",-90.0,-45.0,120.0,180.0
+9,"Eurasia","Europe & Mediterranean",30.0,90.0,-30.0,40.0
+10,"Eurasia","Central Asia, Russia & Himalayas",30.0,90.0,40.0,120.0
+11,"Africa","North & West Africa (Atlas)",0.0,30.0,-30.0,40.0
+12,"Africa","Sub-Saharan Africa (Rift Valley)",-55.0,0.0,-30.0,40.0
+13,"Africa","Middle East & Arabian Plate", 5.0,30.0,40.0,70.0
+14,"Africa","Indian Subcontinent",5.0,30.0,70.0,120.0
+15,"Africa","Indian Ocean Deep",-55.0,5.0,40.0,120.0
+16,"Africa","Antarctica (Atlantic/Indian Sector)",-90.0,-55.0,-30.0,120.0
