@@ -1,8 +1,8 @@
-# Code was written with the help of AI Chat
+# Code was written with the help of AI
 
 from pyspark.sql import SparkSession, Window
 from pyspark.sql.functions import (
-    col, row_number, lit, floor
+    col, row_number, lit, floor, to_timestamp
 )
 
 def run_etl():
@@ -47,7 +47,7 @@ def run_etl():
         col("properties.mag").cast("double").alias("magnitude"),
         col("properties.magType").alias("mag_type"),
         col("properties.place").alias("place"),
-        col("properties.time").cast("bigint").alias("time_utc"),
+        to_timestamp(col("properties.time")).cast("long").alias("time_utc"),
         col("geometry.coordinates").getItem(0).cast("double").alias("longitude"),
         col("geometry.coordinates").getItem(1).cast("double").alias("latitude"),
         col("geometry.coordinates").getItem(2).cast("double").alias("depth_km"),
@@ -66,7 +66,7 @@ def run_etl():
         .drop("rn")
 
     # --- 6. Fuzzy Deduplication (Spatial-Temporal) ---
-    # Problem: Same earthquake might have different IDs in USGS vs Terraquake.
+    # Problem: Earthquake have different IDs in USGS vs Terraquake.
     # Solution: Create "Buckets" to identify events that are physically the same.
     
     # Logic:
